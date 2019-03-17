@@ -1,0 +1,50 @@
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listagem de Voluntário - Anjos da Noite</title>
+        <link rel="stylesheet" href="src/anjosdanoite.css">
+        <link rel="shortcut icon" type="image/png" href="src/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=K2D:300,400,700" rel="stylesheet">
+    </head>
+    <body id="aplication">
+        <header id="header">
+                <a href="dashboard.html"><img src="src/logo.png" height="70px" id="logo"></a>
+                <label id="menu" for="ativa-menu">☰</label>
+                <input id="ativa-menu" type="checkbox" class="escondido">
+                <nav id="nav-menu">
+                    <a href="lista-voluntarios.html" class="item-menu">VOLUNTÁRIOS</a>
+                    <a href="lista-doacoes.html" class="item-menu">DOAÇÕES</a>
+                    <a href="blog-anjos.html" class="item-menu">BLOG</a>
+                    <a href="lista-usuarios.html" class="item-menu">USUARIOS</a>
+                    <a href="javascript:sair()" class="item-menu">SAIR</a>
+                </nav>
+            </header>
+            <div id="listing">
+                <h1 class="center-text"><span style="font-size:.4em">Procurando alguma doação?<br></span>Lista de Doações</h1>
+
+                <input type="search" class="input light-table-filter" data-table="order-table" id="search-box" placeholder="Tá difícil achar? Pesquise aqui!">
+                
+                <a href="cadastro-doacao.html" class="center-text"><button type="button" class="enviar">+ Doação</button></a>
+                <div id="scrollable">
+                <table class="order-table table">
+                    <thead>
+                        <th>Data</th>
+                        <th>CPF / CNPJ</th>
+                        <th>Valor / descrição</th>
+                        <th>Editar</th>
+                    </thead>
+                    <tbody id="dados">
+                    </tbody>
+                </table>
+                <h3 id="carregando">Carregando tabela</h3>
+            </div>
+        </div>
+        <script src="src/script.js"></script>
+        <script>
+            listaDoacao();
+        </script>
+        
+    </body>
+    
+</html>

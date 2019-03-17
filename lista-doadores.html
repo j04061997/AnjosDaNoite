@@ -1,0 +1,58 @@
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listagem de Doadores - Anjos da Noite</title>
+        <link rel="stylesheet" href="src/anjosdanoite.css">
+        <link href="https://fonts.googleapis.com/css?family=K2D:300,400,700" rel="stylesheet">
+    </head>
+    <body id="aplication">
+        <header id="header">
+                <a href="dashboard.html"><img src="src/logo.png" height="70px" id="logo"></a>
+                <label id="menu" for="ativa-menu">☰</label>
+                <input id="ativa-menu" type="checkbox" class="escondido">
+                <nav id="nav-menu">
+                    <a href="lista-voluntarios.html" class="item-menu">VOLUNTÁRIOS</a>
+                    <a href="lista-doacoes.html" class="item-menu">DOAÇÕES</a>
+                    <a href="blog-anjos.html" class="item-menu">BLOG</a>
+                    <a href="configuracoes" class="item-menu">USUARIO</a>
+                    <a href="index.html" class="item-menu">SAIR</a>
+                </nav>
+            </header>
+            <div id="listing">
+                <h1 class="center-text"><span style="font-size:.4em">Procurando algum doador?<br></span>Lista de Doadores</h1>
+
+                <input type="search" class="input light-table-filter" data-table="order-table" id="search-box" placeholder="Tá difícil achar? Pesquise aqui!">
+                
+                <a href="cadastro-doacao.html" class="center-text"><button type="button" class="enviar">Novo Doador</button></a>
+                <div id="scrollable">
+                <table class="order-table table">
+                    <thead>
+                        <th>CPF/CNPJ</th>
+                        <th>Tipo</th>
+                        <th>Valor ou descrição</th>
+                        <th>Data de cadastro</th>
+                        <th>Editar</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>298.929.040-01</td>
+                            <td>Dinheiro</td>
+                            <td>R$ 50</td>
+                            <td>19/10/2018</td>
+                            <td class="edit"><a>✎</a></td>
+                        </tr>
+                        <tr> 
+                            <td>364.967.250-20</td>
+                            <td>Bem de consumo</td>
+                            <td>Bebedouro</td>
+                            <td>10/01/2019</td>
+                            <td class="edit"><a>✎</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+    <script src="src/script.js"></script>
+</html>

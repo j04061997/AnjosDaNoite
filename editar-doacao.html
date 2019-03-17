@@ -1,0 +1,48 @@
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atualização de Voluntário - Anjos da Noite</title>
+        <link rel="stylesheet" href="src/anjosdanoite.css">
+        <link rel="shortcut icon" type="image/png" href="src/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=K2D:300,400,700" rel="stylesheet">
+    </head>
+    <body id="aplication">
+        <header id="header">
+            <a href="dashboard.html"><img src="src/logo.png" height="70px" id="logo"></a>
+            <label id="menu" for="ativa-menu">☰</label>
+            <input id="ativa-menu" type="checkbox" class="escondido">
+            <nav id="nav-menu">
+                <a href="lista-voluntarios.html" class="item-menu">VOLUNTÁRIOS</a>
+                <a href="lista-doacoes.html" class="item-menu">DOAÇÕES</a>
+                <a href="blog-anjos.html" class="item-menu">BLOG</a>
+                <a href="lista-usuarios.html" class="item-menu">USUARIOS</a>
+                <a href="javascript:sair()" class="item-menu">SAIR</a>
+            </nav>
+        </header>
+        <form>
+            <div id="p1" class="step-form">
+                <h1 class="center-text"><span style="font-size:.4em">Atualização de Doação<br></span>Dados da Doação</h1>
+
+                <label class="label">Data de Doação<small><br>Dia no qual a doação foi recebida (obrigatório)</small></label>
+                <input type="date" class="input" id="data-doacao">
+
+                <label class="label">CPF/CNPJ<small><br>do doador ou empresa doadora (obrigatório)</small></label>
+                <input type="text" class="input" id="cpfcnpj">
+
+                <label class="label">Valor<small><br>em R$ (opcional)</small></label>
+                <input type="number" step="0.01" min="0" class="input" id="valor">
+
+                <label class="label">Descrição<small><br>O que foi recebido (opcional)</small></label>
+                <textarea class="input" id="descricao"></textarea>
+                
+                <div class="center-text">
+                    <button class="enviar" type="button" onclick="apagaDoacao()" >✖ Apagar</button>
+                    <button class="enviar" type="button" onclick="alteraDoacao()">Alterar  💾</button>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script src="src/script.js"></script>
+    <script>buscaDoacao()</script>
+</html>

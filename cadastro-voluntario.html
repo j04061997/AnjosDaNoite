@@ -1,0 +1,138 @@
+<html id="html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Voluntário - Anjos da Noite</title>
+        <link rel="stylesheet" href="src/anjosdanoite.css">
+        <link rel="shortcut icon" type="image/png" href="src/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=K2D:300,400,700" rel="stylesheet">
+    </head>
+    <body id="aplication">
+        <header id="header">
+            <a href="dashboard.html"><img src="src/logo.png" height="70px" id="logo"></a>
+            <label id="menu" for="ativa-menu">☰</label>
+            <input id="ativa-menu" type="checkbox" class="escondido">
+            <nav id="nav-menu">
+                <a href="lista-voluntarios.html" class="item-menu">VOLUNTÁRIOS</a>
+                <a href="lista-doacoes.html" class="item-menu">DOAÇÕES</a>
+                <a href="blog-anjos.html" class="item-menu">BLOG</a>
+                <a href="lista-usuarios.html" class="item-menu">USUARIOS</a>
+                <a href="index.html" class="item-menu">SAIR</a>
+            </nav>
+        </header>
+        <form>
+            <div id="p1" class="step-form">
+                <h1 class="center-text"><span style="font-size:.4em">Cadastro de Voluntário<br></span>Dados Pessoais - 1/3</h1>
+
+                <label class="label">Nome completo<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="nome">
+
+                <label class="label">CPF<small><br>(Opcional por enquanto)</small></label>
+                <input type="text" class="input" id="cpf">
+                
+                <label class="label">Data Nascimento<small><br>(Obrigatório)</small></label>
+                <input type="date" class="input" id="data_nascimento">
+
+                <label class="label">Gênero<small><br>(Obrigatório)</small></label>
+                <select class="input" id="genero">
+                    <option class="opt" value="2">Masculino</option>
+                    <option class="opt" value="1">Feminino</option>
+                    <option class="opt" value="3">Outro</option>
+                </select>
+
+                <label class="label">Estado Civil<small><br>(Obrigatório)</small></label>
+                <select class="input" id="estado_civil">
+                    <option class="opt" value="1">Solteiro</option>
+                    <option class="opt" value="2">Casado</option>
+                    <option class="opt" value="3">Separado</option>
+                    <option class="opt" value="4">Divorciado</option>
+                    <option class="opt" value="5">Viúvo</option>
+                </select>
+                
+                <button onclick="toggle('p2')" class="enviar" type="button">Próximo ⧽</button>
+            </div>
+
+            <div id="p2" class="step-form">
+                <h1 class="center-text"><span style="font-size:.4em">Cadastro de Voluntário<br></span>Localização - 2/3</h1>
+    
+                <label class="label">Endereço<small><br>Rua, Avenida e etc... (Obrigatório)</small></label>
+                <input type="text" class="input" id="endereco">
+    
+                <label class="label">Complemento<small><br>Casa, Apartamento e etc... (Obrigatório)</small></label>
+                <input type="text" class="input" id="complemento">
+    
+                <label class="label">CEP<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="cep">
+
+                <label class="label">Estado<small><br>(Obrigatório)</small></label>
+                <select class="input" id="estado">
+                    <option class="opt" value="1">São Paulo</option>
+                    <option class="opt" value="2">Acre</option>
+                    <option class="opt" value="3">Alagoas</option>
+                    <option class="opt" value="4">Amapá</option>
+                    <option class="opt" value="5">Amazonas</option>
+                    <option class="opt" value="6">Bahia</option>
+                    <option class="opt" value="7">Ceará</option>
+                    <option class="opt" value="8">Distrito Federal</option>
+                    <option class="opt" value="9">Espírito Santo</option>
+                    <option class="opt" value="10">Goiás</option>
+                    <option class="opt" value="11">Maranhão</option>
+                    <option class="opt" value="12">Mato Grosso</option>
+                    <option class="opt" value="13">Mato Grosso do Sul</option>
+                    <option class="opt" value="14">Minas Gerais</option>
+                    <option class="opt" value="15">Pará</option>
+                    <option class="opt" value="16">Paraíba</option>
+                    <option class="opt" value="17">Paraná</option>
+                    <option class="opt" value="18">Pernambuco</option>
+                    <option class="opt" value="19">Piauí</option>
+                    <option class="opt" value="20">Rio de Janeiro</option>
+                    <option class="opt" value="21">Rio Grande do Norte</option>
+                    <option class="opt" value="22">Rio Grande do Sul</option>
+                    <option class="opt" value="23">Rondônia</option>
+                    <option class="opt" value="24">Roraima</option>
+                    <option class="opt" value="25">Santa Catarina</option>
+                    <option class="opt" value="26">Sergipe</option>
+                    <option class="opt" value="27">Tocantins</option>
+                </select>
+                        
+                <label class="label">Cidade<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="cidade">
+
+                <label class="label">Bairro<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="bairro">
+
+                <div class="center-text">
+                    <button onclick="toggle('p1')" class="enviar" type="button">⧼ Anterior</button>
+                    <button onclick="toggle('p3')" class="enviar" type="button">Próximo ⧽</button>
+                </div>
+            </div>
+
+            <div id="p3" class="step-form">
+                <h1 class="center-text"><span style="font-size:.4em">Cadastro de Voluntário<br></span>Contato - 3/3</h1>
+
+                <label class="label">Telefone 1<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="telefone1">
+
+                <label class="label">Telefone 2<small><br>(Opcional)</small></label>
+                <input type="text" class="input" id="telefone2">
+    
+                <label class="label">E-mail<small><br>(Obrigatório)</small></label>
+                <input type="text" class="input" id="email">
+
+                <label class="label">Status do voluntário<small><br>(Obrigatório)</small></label>
+                <select class="input" id="ostatus">
+                    <option class="opt" value="2">Presente inativo</option>
+                    <option class="opt" value="1">Presente ativo</option>
+                    <option class="opt" value="3">Não presente ativo</option>
+                    <option class="opt" value="4">Não presente inativo</option>
+                </select>
+
+                <div class="center-text">
+                    <button onclick="toggle('p2')" class="enviar" type="button">⧼ Anterior</button>
+                    <button class="enviar" type="button" onclick="insereVoluntario()">Cadastrar 💾</button>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script src="src/script.js"></script>
+</html>
