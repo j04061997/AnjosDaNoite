@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+#html {
+    font-family: 'K2D', sans-serif;
+    background: url('background.png')
+}
+
+#pagina_login {
+    margin: 0px;
+    display: grid;
+    min-height: 100vh;
+}
+
+#aplication {
+    margin: 0px;
+    display: grid;
+    color: white;
+}
+
+#header {
+    display: grid;
+    color: white;
+    background: #354157;
+    grid-template-columns: 2fr 1fr;
+}
+
+#menu {
+    font-size: 2em;
+    align-self: center;
+    text-align: center;
+}
+
+#ativa-menu {
+    display: none
+}
+
+.item-menu {
+    padding: 1em 0;
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+#logo {
+    margin: 1em;
+    align-self: center;
+    display: grid;
+}
+
+#modulo_login {
+    display: grid;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding: 2em;
+    background: #354157;
+}
+
+.label {
+    font-size: 1.23em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.input, .enviar {
+    color: white;
+    padding: .92em;
+    border-radius: 36px;
+    font-size: 1.5em;
+    outline: none;
+    margin: auto;
+}
+
+.input {
+    border: 2px solid #fafafa;
+    background: transparent;
+    width: 95%;
+    font-family: 'K2D', sans-serif;
+}
+
+.label {
+    font-size: 1.23em;
+    font-weight: 300;
+    padding: 1em 0 .5em 0;
+}
+
+#logo-login {
+    display: block;
+    margin: auto;
+}
+
+.enviar {
+    margin: 1em auto 0 auto;
+    background: #f7ce20;
+    width: 10em;
+    border: none;
+}
+
+.opt {
+    background: #354157;
+}
+
+.step-form, #listing {
+    min-height: calc(100vh - 7em);
+    display: grid;
+    background: #354157;
+    margin: 0
+}
+
+.center-text {
+    text-align: center
+}
+
+#ativa-menu:checked ~ #nav-menu {
+    display: grid!important;
+}
+
+#scrollable {
+    margin: 0 5% 0 5%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 1em;
+    background: white;
+    color: #354157; 
+}
+
+td {
+    border-bottom: 2px solid white;
+    text-align: center;
+    padding: 1em;
+    white-space: nowrap;
+}
+
+.edit {
+    background: #f7ce20;
+    padding: 0px;   
+}
+
+.edit > a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+    padding: .4em 1em;
+}
+
+.del {
+    background: tomato;
+    font-size: 2em;
+    padding: .1em;
+}
+
+#search-box::placeholder {
+    color: cornsilk;
+}
+
+.right {
+    text-align: right;
+    margin: 0 2em;
+}
+
+#p2, #p3 {
+    display: none;
+}
+
+.radio:checked ~ .radio-mark {
+    background: white;
+}
+
+.radio-mark {
+    width: 1.23em;
+    height: 1.23em;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex
+}
+
+.checkbox-label {
+    text-align: center;
+    font-size: 1.23em;
+    padding: .5em 3em;
+    display: grid;
+    grid-template-columns: 1.23em auto
+}
+
+.hidden {
+    display: none
+}
+
+#scrollable {
+    margin: 5%;   
+}
+
+@media screen and (max-width: 767px) {
+    #nav-menu {
+        display: none;
+        grid-column: 1 / span 2;
+    }
+    #scrollable {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+    #nav-menu {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    #header {
+        grid-template-columns: 1fr 5fr;
+        max-height: 6em;
+    }
+    #modulo_login {
+        width: 80vw;
+        height: auto;
+    }
+    #listing, .step-form {
+        margin: 0 auto 0 auto;
+        width: 80vw
+    }
+}
